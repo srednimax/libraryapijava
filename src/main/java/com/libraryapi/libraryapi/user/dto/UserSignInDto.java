@@ -1,4 +1,4 @@
-package com.libraryapi.libraryapi.user;
+package com.libraryapi.libraryapi.user.dto;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

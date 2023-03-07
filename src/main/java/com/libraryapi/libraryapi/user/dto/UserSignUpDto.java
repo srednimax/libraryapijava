@@ -1,5 +1,7 @@
-package com.libraryapi.libraryapi.user;
+package com.libraryapi.libraryapi.user.dto;
 
+import com.libraryapi.libraryapi.user.Gender;
+import com.libraryapi.libraryapi.user.Role;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
