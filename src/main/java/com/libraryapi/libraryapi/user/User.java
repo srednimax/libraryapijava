@@ -6,7 +6,7 @@ import lombok.*;
 import java.time.LocalDate;
 
 @Entity
-@Table
+@Table(name="Users")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -21,7 +21,7 @@ public class User {
         strategy = GenerationType.SEQUENCE,
             generator = "user_sequence"
     )
-    private int id;
+    private Integer id;
     private String email;
     private String password;
     private String firstName;
