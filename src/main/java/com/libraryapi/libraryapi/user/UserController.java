@@ -20,7 +20,7 @@ public class UserController {
         return userService.getUsers();
     }
     @PostMapping(path = "SignUp")
-    public User signIn(@RequestBody User newUser){
-        return userService.signUp(newUser);
+    public UserDto signUp(@RequestBody UserSignUpDto userSignUpDto){
+        return userService.signUp(userSignUpDto);
     }
 }
