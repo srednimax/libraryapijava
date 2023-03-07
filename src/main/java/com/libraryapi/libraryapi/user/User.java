@@ -6,11 +6,22 @@ import lombok.*;
 import java.time.LocalDate;
 
 @Entity
+@Table
 @Getter
 @Setter
 @NoArgsConstructor
 public class User {
-    private @Id int id;
+    @Id
+    @SequenceGenerator(
+            name ="user_sequence",
+            sequenceName = "user_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+        strategy = GenerationType.SEQUENCE,
+            generator = "user_sequence"
+    )
+    private int id;
     private String email;
     private String password;
     private String firstName;
