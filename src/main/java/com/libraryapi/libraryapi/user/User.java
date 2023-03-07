@@ -12,15 +12,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class User {
     @Id
-    @SequenceGenerator(
-            name ="user_sequence",
-            sequenceName = "user_sequence",
-            allocationSize = 1
-    )
-    @GeneratedValue(
-        strategy = GenerationType.SEQUENCE,
-            generator = "user_sequence"
-    )
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String email;
     private String password;
