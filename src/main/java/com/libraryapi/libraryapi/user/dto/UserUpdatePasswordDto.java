@@ -1,22 +1,15 @@
 package com.libraryapi.libraryapi.user.dto;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 public class UserUpdatePasswordDto {
     private Integer id;
     private String oldPassword;
     private String newPassword;
     private String confirmNewPassword;
 
-    public UserUpdatePasswordDto(Integer id, String oldPassword, String newPassword, String confirmNewPassword) {
-        this.id = id;
-        this.oldPassword = oldPassword;
-        this.newPassword = newPassword;
-        this.confirmNewPassword = confirmNewPassword;
-    }
 }

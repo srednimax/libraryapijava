@@ -2,15 +2,14 @@ package com.libraryapi.libraryapi.user.dto;
 
 import com.libraryapi.libraryapi.user.Gender;
 import com.libraryapi.libraryapi.user.Role;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDate;
 
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 public class UserSignUpDto {
     private String email;
     private String password;
@@ -22,15 +21,4 @@ public class UserSignUpDto {
     private Role role;
     private double penalty;
 
-    public UserSignUpDto(String email, String password, String firstName, String lastName, String phoneNumber, LocalDate birth, Gender gender, Role role, double penalty) {
-        this.email = email;
-        this.password = password;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.phoneNumber = phoneNumber;
-        this.birth = birth;
-        this.gender = gender;
-        this.role = role;
-        this.penalty = penalty;
-    }
 }

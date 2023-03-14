@@ -2,14 +2,13 @@ package com.libraryapi.libraryapi.user.dto;
 
 import com.libraryapi.libraryapi.user.Gender;
 import com.libraryapi.libraryapi.user.Role;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDate;
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 public class UserDto {
     private Integer id;
     private String email;
@@ -20,16 +19,6 @@ public class UserDto {
     private Gender gender;
     private Role role;
     private double penalty;
+    private String JwtToken;
 
-    public UserDto(Integer id, String email, String firstName, String lastName, String phoneNumber, LocalDate birth, Gender gender, Role role, double penalty) {
-        this.id = id;
-        this.email = email;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.phoneNumber = phoneNumber;
-        this.birth = birth;
-        this.gender = gender;
-        this.role = role;
-        this.penalty = penalty;
-    }
 }
